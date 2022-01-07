@@ -42,7 +42,7 @@ async def cooldown(ctx): # sends >cooldown in bot-commands
     cooldownmsg = await bot.wait_for("message",timeout=60.0,check=check)
     await ctx.reply(f'<@{ctx.author.id}>, Check: <#893744951916101642>')
 @bot.command() 
-async def auto(ctx, id=None): # sends >buy <id> every time ur cooldown is over
+async def auto(ctx, id=None): # sends >buy <id> every time ur cooldown is over, manually solve the captcha
     await ctx.reply('Auto API has been enabled, (solve the captcha in your DMs)')
     while True:
         channel = bot.get_channel(893744951916101642)
